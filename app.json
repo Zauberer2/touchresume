@@ -4,7 +4,8 @@
   "keywords": ["resume", "cv", "headhunter", "superjob"],
   "addons": [
     "heroku-postgresql:hobby-dev",
-    "heroku-redis:hobby-dev"
+    "heroku-redis:hobby-dev",
+    "sentry:f1"
   ],
   "formation": {
     "web": {
