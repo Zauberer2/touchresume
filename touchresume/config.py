@@ -38,7 +38,7 @@ class AppConfig(object):
 
 LoggingConfig = {
     'version': 1,
-    'disable_existing_loggers': True,
+    'disable_existing_loggers': False,
     'root': {
         'propagate': True
     },
