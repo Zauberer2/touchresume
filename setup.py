@@ -15,7 +15,7 @@ with io.open('touchresume/__init__.py', 'rt', encoding='utf8') as f:
 setup(
     name='RaiseResume',
     version=version,
-    url='https://github.com/perewall/touchresume',
+    url='https://github.com/Zauberer2/touchresume',
     license='MIT',
     author='perewall',
     author_email='art@pwmedia.ru',
