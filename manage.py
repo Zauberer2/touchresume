@@ -8,8 +8,8 @@ from git import Repo
 from semver import match
 from click import option, argument, echo, ClickException
 
-from touchresume.cli import cli
-from touchresume import __version__
+from raiseresume.cli import cli
+from raiseresume import __version__
 
 
 @cli.command(with_appcontext=False)
@@ -24,7 +24,7 @@ def test(dir):
 @option('-d', '--dev', default='dev', help='Develop branch (dev)')
 @option('-m', '--master', default='master', help='Master branch (master)')
 @argument('version')
-def release(dev, master, version, app_path='touchresume'):
+def release(dev, master, version, app_path='raiseresume'):
     """Make Git release."""
     if not match(version, f'>{__version__}'):
         raise ClickException(f'Version must be greater than {__version__}')
