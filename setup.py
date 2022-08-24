@@ -13,7 +13,7 @@ with io.open('touchresume/__init__.py', 'rt', encoding='utf8') as f:
 
 
 setup(
-    name='TouchResume',
+    name='RaiseResume',
     version=version,
     url='https://github.com/perewall/touchresume',
     license='MIT',
@@ -47,8 +47,8 @@ setup(
         'gunicorn[eventlet] >= 19.9.0',
         'sentry_sdk[flask] >= 0.11.1'
     ],
-    entry_points={'console_scripts': ['touchresume = touchresume.cli:cli']},
-    packages=['touchresume'],
+    entry_points={'console_scripts': ['raiseresume = raiseresume.cli:cli']},
+    packages=['raiseresume'],
     package_data={
         'touchresume': [
             'migrations/*',
