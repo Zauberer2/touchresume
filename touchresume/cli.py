@@ -40,7 +40,7 @@ def db_purge():
 
 @group(cls=FlaskGroup, create_app=create_app, set_debug_flag=False)
 def cli():
-    """TouchResume CLI"""
+    """RaiseResume CLI"""
 
 
 @cli.command()
