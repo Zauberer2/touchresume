@@ -24,22 +24,22 @@ class Providers(UserDict):
         sj_redir_url = url_for(callback, provider='superjob', _external=True)
 
         app.extensions = getattr(app, 'extensions', {})
-        app.extensions['touchresume'] = {}
+        app.extensions['raiseresume'] = {}
 
         if app.config['HH_CLIENT_ID'] and app.config['HH_CLIENT_SECRET']:
-            app.extensions['touchresume']['headhunter'] = HeadHunter(
+            app.extensions['raiseresume']['headhunter'] = HeadHunter(
                 user_agent=user_agent,
                 client_id=app.config['HH_CLIENT_ID'],
                 client_secret=app.config['HH_CLIENT_SECRET'])
 
         if app.config['SJ_CLIENT_ID'] and app.config['SJ_CLIENT_SECRET']:
-            app.extensions['touchresume']['superjob'] = SuperJob(
+            app.extensions['raiseresume']['superjob'] = SuperJob(
                 user_agent=user_agent,
                 client_id=app.config['SJ_CLIENT_ID'],
                 client_secret=app.config['SJ_CLIENT_SECRET'],
                 redirect_uri=sj_redir_url)
 
-        self.data = LocalProxy(lambda: current_app.extensions['touchresume'])
+        self.data = LocalProxy(lambda: current_app.extensions['raiseresume'])
 
         @app.context_processor
         def template_inject():
